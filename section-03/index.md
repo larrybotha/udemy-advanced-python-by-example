@@ -28,3 +28,16 @@
   # x = 1
   # y = 2
   ```
+- the ternary operator takes the following form in Python:
+
+  ```python
+  x if some_condition else y
+  ```
+- `input` values can be nested in class instantiations:
+
+  ```python
+  point = Point(float(input("x: ")), float(input("y: ")))
+  ```
+
+  - `input` returns a `str`, so we need to explicitly cast it to the correct
+    type
