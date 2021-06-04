@@ -60,6 +60,13 @@ class Rectangle:
         else:
             return False
 
+    def area(self):
+        lower_left, upper_right = self
+        lower_x, lower_y = lower_left
+        upper_x, upper_y = upper_right
+
+        return abs(upper_x - lower_x) * abs(upper_y - lower_y)
+
     def __iter__(self):
         return iter([self.bottom_left, self.top_right])
 
