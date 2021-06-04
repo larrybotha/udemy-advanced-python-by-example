@@ -4,4 +4,4 @@ Notes and annotations from Advanced Python by Example on Udemy: https://www.udem
 
 [Course files](https://github.com/pythonprocourse/files)
 
-- [Section 3 - Creating and using Python classes](./section-03)
+- [App 1 - Geometry Game](./app-01)
