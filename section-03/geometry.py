@@ -8,7 +8,7 @@ from math import pow, sqrt
 class Point:
     """Point."""
 
-    def __init__(self, x, y):
+    def __init__(self, x: float, y: float):
         """__init__.
 
         :param x:
@@ -32,6 +32,9 @@ class Point:
         """__iter__."""
         return iter([self.x, self.y])
 
+    def __repr__(self):
+        return f"Point({self.x}, {self.y})"
+
 
 class Rectangle:
     """Rectangle."""
@@ -52,10 +55,13 @@ class Rectangle:
         lower_x, lower_y = lower_left
         upper_x, upper_y = upper_right
 
-        if lower_x < point.x < upper_x and lower_y < point.y < upper_y:
+        if lower_x <= point.x <= upper_x and lower_y <= point.y <= upper_y:
             return True
         else:
             return False
 
     def __iter__(self):
         return iter([self.bottom_left, self.top_right])
+
+    def __repr__(self):
+        return f"Rectangle(\n\t{self.bottom_left},\n\t{self.top_right}\n)"
