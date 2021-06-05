@@ -1,10 +1,11 @@
 from random import randint
+from turtle import Turtle
 
-from geometry import Point, Rectangle
+from geometry import GeometryCanvas, Point, Rectangle
 
 if __name__ == "__main__":
-    lower_left = Point(randint(0, 9), randint(0, 9))
-    top_right = Point(randint(10, 19), randint(10, 19))
+    lower_left = Point(randint(0, 99), randint(0, 99))
+    top_right = Point(randint(100, 199), randint(100, 199))
     rectangle = Rectangle(lower_left, top_right)
 
     print(f"Rectangle coordinates:\n{rectangle}\n")
@@ -20,3 +21,6 @@ if __name__ == "__main__":
     area_answer_text = "correct" if user_area == area else "incorrect"
 
     print(f"\n{area_answer_text}! Rectange area is {area}")
+
+    canvas = GeometryCanvas(Turtle())
+    canvas.draw(rectangle, user_point)

@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
+import turtle
 from math import pow, sqrt
+from turtle import Turtle
 
 
 class Point:
@@ -72,3 +74,43 @@ class Rectangle:
 
     def __repr__(self):
         return f"Rectangle(\n\t{self.bottom_left},\n\t{self.top_right}\n)"
+
+
+class GeometryCanvas:
+    # private member
+    __canvas = None
+
+    def __init__(self, canvas: Turtle):
+        self.__canvas = canvas
+        self.__canvas.speed(2)
+
+    def draw(self, rectangle: Rectangle, point: Point):
+        self.__draw_rectangle(rectangle)
+        self.__draw_dot(point)
+        turtle.done()
+
+    def __draw_rectangle(self, rectangle: Rectangle):
+        canvas = self.__canvas
+        lower_left, upper_right = rectangle
+        xa, ya = lower_left
+        xb, yb = upper_right
+        width = abs(xb - xa)
+        height = abs(yb - ya)
+        canvas.penup()
+        canvas.goto(xa, ya)
+
+        canvas.pendown()
+        canvas.forward(width)
+        canvas.left(90)
+        canvas.forward(height)
+        canvas.left(90)
+        canvas.forward(width)
+        canvas.left(90)
+        canvas.forward(height)
+
+    def __draw_dot(self, point: Point):
+        canvas = self.__canvas
+        canvas.penup()
+        canvas.goto(point.x, point.y)
+        canvas.pendown()
+        canvas.dot()
