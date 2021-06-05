@@ -41,3 +41,29 @@
 
   - `input` returns a `str`, so we need to explicitly cast it to the correct
     type
+- `MyClass` can be extended by providing it as an argument to another class:
+
+  ```python
+  class MyClass:
+    # ...
+
+  class MySubClass(MyClass):
+    # ...
+  ```
+
+  - `MySubClass` _extends_ MyClass. _Subclassing_ is another name for extending
+    a class
+  - `MySubClass` is the child, while `MyClass` is the parent
+- to make a class member or method private in Python, prepend with `__`:
+
+  ```python
+  class MyClass:
+    __private_member = None
+
+    def __init__(self):
+      __private_member = 'something private'
+
+    def __my_private_method(self):
+      # ...
+  ```
+- protected members and methods in Python are prepended with a single underscore
