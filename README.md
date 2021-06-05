@@ -2,4 +2,6 @@
 
 Notes and annotations from Advanced Python by Example on Udemy: https://www.udemy.com/course/the-python-pro-course/
 
-- [Section 3 - Creating and using Python classes](./section-03)
+[Course files](https://github.com/pythonprocourse/files)
+
+- [App 1 - Geometry Game](./app-01)
