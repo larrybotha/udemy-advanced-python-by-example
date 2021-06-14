@@ -1,5 +1,6 @@
 from setuptools import setup
 
+# see https://github.com/pypa/sampleproject/blob/main/setup.py
 setup(
     name="app",
     version="0.0.1",
